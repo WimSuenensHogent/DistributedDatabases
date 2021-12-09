@@ -1,20 +1,60 @@
 % https://www.youtube.com/watch?v=fCzF5gDy60g
+% https://www.youtube.com/playlist?list=PLknjcpwMhvSgauKyhScPiQGW9H4V0EKj5
 
 % Preamble
-
-\documentclass{article}
-% \\documentclass{beamer}
-
-\usepackage[margin=1.25in]{geometry}
-\usepackage{amsmath, amssymb}
-\usepackage{graphicx}
-
+\documentclass[12pt]{DistributedDatabases}[2021/12/09]
 
 % Document Environment
 \begin{document}
 
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\begin{titlepage}
 \begin{center}
-    {\Huge Big Centered Text}
+
+\vspace*{.06\textheight}
+{\scshape\LARGE{Hogeschool Gent}}
+\vspace{1.5cm}
+
+\HRule \\[0.8cm] % Horizontal line
+{\huge{Distributed Databases}}\vspace{0.4cm}
+\HRule \\[1.5cm] % Horizontal line
+
+\vfill
+
+\large \textit{\textbf{Machine Learning}}\\[0.4cm]
+\textit{\textbf{with}}\\[0.4cm]
+\textit{\textbf{auto-sklearn}}\\[0.4cm]
+  
+\vfill
+
+\begin{flushright} \large
+  \emph{Students}\\
+  Wim \textsc{Suenens} \\
+  Bazille \textsc{Van de Walle} \\
+  \vspace{1.0cm}
+  \emph{Professor}\\
+  Stijn \textsc{Lievens}
+\end{flushright}
+
+\vfill
+
+{\large \today}\\[2cm]
+  
+\vfill
 \end{center}
+\end{titlepage}
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+% \newpage
+\setcounter{page}{1}
+
+\input{./chapters/_introduction.tex}
+\input{./chapters/regression.tex}
+\input{./chapters/classification.tex}
 
 \end{document}

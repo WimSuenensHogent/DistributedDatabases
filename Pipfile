@@ -11,6 +11,9 @@ seaborn = "*"
 sklearn = "*"
 kaggle = "*"
 auto-sklearn = "*"
+keras = "*"
+tensorflow = "*"
+tensorflow-datasets = "*"
 
 [dev-packages]
 jupyter = "*"

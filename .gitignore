@@ -1,6 +1,7 @@
 /.kaggle
 /notebooks
 .ipynb_checkpoints
+/.vscode
 
 *.aux
 *.log
@@ -8,3 +9,4 @@
 *.pdf
 *.fdb*
 *.fls
+*.toc
