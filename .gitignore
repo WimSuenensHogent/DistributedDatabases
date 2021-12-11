@@ -1,3 +1,4 @@
+/.DS_Store
 /.kaggle
 /notebooks
 .ipynb_checkpoints
@@ -10,3 +11,4 @@
 *.fdb*
 *.fls
 *.toc
+*.out

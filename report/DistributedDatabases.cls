@@ -18,6 +18,10 @@
 \RequirePackage{calc}
 \RequirePackage{geometry}
 \RequirePackage{lipsum}
+\RequirePackage{hyperref}
+\RequirePackage{graphicx}
+\graphicspath{ {./images/} }
+
 % \RequirePackage{showframe}
 
 %----------------------------------------------------------------------------------------
