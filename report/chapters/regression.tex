@@ -88,17 +88,21 @@ We chose 3 models from kaggle to compare our results with. After comparing our s
 This dataset can be used to explore the current market scenario for Televisions. There are various types of screens with different operating systems offered by several manufacturers at competitive prices.
 
 \subsection{Dataset}
-This dataset includes specifications of different televisions offered by various brands with prices and ratings.
+\newcommand{\kagglelinktv}{https://www.kaggle.com/devsubhash/television-brands-ecommerce-dataset}
+
+This \href{\kagglelinktv}{dataset\footnote{Television dataset:\href{\kagglelinktv}{\kagglelinktv}}} includes specifications of different televisions offered by various brands with prices and ratings.
 It contains 912 samples with 7 attributes. Here are the columns in this dataset-
 Brand Resolution Size Selling Price Original Price Operating System Rating
 
-Brand: This indicates the manufacturer of the product i.e. Television
-Resolution: This has multiple categories and indicates the type of display i.e. LED, HD LED, etc.
-Size: This indicates the screen size in inches
-Selling Price: This column has the Selling Price or the Discounted Price of the product
-Original Price: This includes the Original Price of the product from the manufacturer.
-Operating system: This categorical variable shows the type of OS like Android, Linux, etc.
-Rating: Average customer ratings on a scale of 5.
+\begin{itemize}
+    \item Brand: This indicates the manufacturer of the product i.e. Television
+    \item Resolution: This has multiple categories and indicates the type of display i.e. LED, HD LED, etc.
+    \item Size: This indicates the screen size in inches
+    \item Selling Price: This column has the Selling Price or the Discounted Price of the product
+    \item Original Price: This includes the Original Price of the product from the manufacturer.
+    \item Operating system: This categorical variable shows the type of OS like Android, Linux, etc.
+    \item Rating: Average customer ratings on a scale of 5
+\end{itemize}
 
 \subsection{Model Performance}
 First we visualised the dataset with a pairplot.
@@ -127,5 +131,6 @@ After fitting and training the data this are the results we got for the differen
 \end{table}
 
 \subsection{Model Comparision}
-When we looked on the kaggle page of this dataset we found out that there are not yet any other auto-sklearn projects submitted. Thats why we can not compare our results with someone else. We do notice te big difference between test and training data results.
-Url1: \url{https://www.kaggle.com/devsubhash/television-brands-ecommerce-dataset/code}
+\newcommand{\kagglelinktvcode}{https://www.kaggle.com/devsubhash/television-brands-ecommerce-dataset/code}
+
+When we looked on the \href{\kagglelinktvcode}{kaggle\footnote{Television code page:\href{\kagglelinktvcode}{\kagglelinktvcode}}} page of this dataset we found out that there are not yet any other auto-sklearn projects submitted. Thats why we can not compare our results with someone else. We do notice te big difference between test and training data results.
