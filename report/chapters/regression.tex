@@ -40,8 +40,8 @@ After fitting and training the data this are the results we got for the differen
     \begin{center}
         \caption{Table with training results.}
         \label{tab:training results}
-        \begin{tabular}{l|r|r|r} % <-- Changed to S here.
-            \textbf{function} & \textbf{Training data} & \textbf{Test data} & \textbf{Test Validation data}\\
+        \begin{tabular}{l|S|r|l} % <-- Changed to S here.
+            \textbf{function} & \textbf{Training data} & \textbf{Test data} & \textbf{Validation data}\\
             \hline
             mean squared error & 59050.4794 & 293230.5317 & 585230.4846\\
             mean absolute error & 26.3980 & 55.7094 & 59.8129\\
@@ -52,22 +52,73 @@ After fitting and training the data this are the results we got for the differen
 
 \subsection{Model Comparision}
 
+We chose 3 models from kaggle to compare our results with. After comparing our scores we found out that we have a better performing model. Our model included te model of the car, this was something the other models left out. We can conclude that our models performs better than the ones we compared scores with.
+\\
+Url1: \url{https://www.kaggle.com/selinsong/u-car-rf-r2-score-0-94/data}
 
-\url{https://www.kaggle.com/selinsong/u-car-rf-r2-score-0-94/data}
+Url2: \url{https://www.kaggle.com/yuyuyuyuy/rf-test-r2-score-0-956}
 
-\url{https://www.kaggle.com/yuyuyuyuy/rf-test-r2-score-0-956}
+Url3: \url{https://www.kaggle.com/johyunkang/py-rf-test-r2-0-939}
 
-\url{https://www.kaggle.com/johyunkang/py-rf-test-r2-0-939}
+\begin{table}[h!]
+    \begin{center}
+        \caption{Table with r2 results.}
+        \label{tab:training results}
+        \begin{tabular}{l|S} % <-- Changed to S here.
+            \textbf{data} & \textbf{R2 score} \\
+            \hline
+            Training data & 0.9997784238195022\\
+            Test data & 0.9989334899119373 \\
+            Validation data & 0.9978756073515518\\
+            Url1 & 0.94\\
+            Url2 & 0.956\\
+            Url3 & 0.939\\
+        \end{tabular}
+    \end{center}
+\end{table}
 
-after comparing our work to these 3 projects found on kaggle we can conclude that we are not that far off on performance as the other entries.
 \section{Television Brand E-commerce}
-\lipsum[2-2]
+This dataset can be used to explore the current market scenario for Televisions. There are various types of screens with different operating systems offered by several manufacturers at competitive prices.
 
 \subsection{Dataset}
-\lipsum[2-2]
+This dataset includes specifications of different televisions offered by various brands with prices and ratings.
+It contains 912 samples with 7 attributes. Here are the columns in this dataset-
+Brand Resolution Size Selling Price Original Price Operating System Rating
+
+Brand: This indicates the manufacturer of the product i.e. Television
+Resolution: This has multiple categories and indicates the type of display i.e. LED, HD LED, etc.
+Size: This indicates the screen size in inches
+Selling Price: This column has the Selling Price or the Discounted Price of the product
+Original Price: This includes the Original Price of the product from the manufacturer.
+Operating system: This categorical variable shows the type of OS like Android, Linux, etc.
+Rating: Average customer ratings on a scale of 5.
 
 \subsection{Model Performance}
-\lipsum[2-2]
+First we visualised the dataset with a pairplot.
+This gave us an idea of what to expected from this dataset.
+The pairplot that is based on the resolution shows clearly HD LED and ULTRA HD LED are the most common resolution.
+\begin{figure}
+    \includegraphics[width=\linewidth]{images/pairplot_resolution.png}
+    \caption{A pairplot based on tv resolution}
+    \label{fig:pairplot resolution}
+\end{figure}
+
+After fitting and training the data this are the results we got for the different data sets.
+
+\begin{table}[htp]
+    \begin{center}
+        \caption{Table with training results.}
+        \label{tab:training results}
+        \begin{tabular}{l|S|r} % <-- Changed to S here.
+            \textbf{function} & \textbf{Training data} & \textbf{Test data} \\
+            \hline
+            mean squared error & 81016219.59417547 & 952681194.3707451 \\
+            mean absolute error & 5251.913730638445 & 14205.972881317139 \\
+            r2 & 0.9796709758590545 & 0.8247644898857763\\
+        \end{tabular}
+    \end{center}
+\end{table}
 
 \subsection{Model Comparision}
-\lipsum[2-2]
+When we looked on the kaggle page of this dataset we found out that there are not yet any other auto-sklearn projects submitted. Thats why we can not compare our results with someone else. We do notice te big difference between test and training data results.
+Url1: \url{https://www.kaggle.com/devsubhash/television-brands-ecommerce-dataset/code}
