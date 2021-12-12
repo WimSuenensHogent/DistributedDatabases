@@ -14,10 +14,10 @@ auto-sklearn = "*"
 keras = "*"
 tensorflow = "*"
 tensorflow-datasets = "*"
-
-[dev-packages]
 jupyter = "*"
 ipykernel = "*"
+
+[dev-packages]
 
 [requires]
 python_version = "3.9"
