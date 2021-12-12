@@ -22,7 +22,7 @@ The \href{\kagglelinkheartfailure}{dataset\footnote{Heart Failure Prediction : \
   \item platelets: The number of platelets in the blood ($kiloplatelets/mL$).
   \item serum\_creatinine: The level of serum creatinine in the blood ($mg/dL$).
   \item serum\_sodium: The level of serum sodium in the blood ($mEq/L$).
-  \item sex: Woman or man ($binary$).
+  \item sex: woman or man ($binary$).
   \item smoking: Whether the patient smokes or not ($boolean$).
   \item time: Follow-up period ($days$)
 \end{itemize}
@@ -49,3 +49,17 @@ The mean accuracy reduces for the testing data to 73,33\%. When we compare the a
 When we check the previous kaggle submissions with the same dataset, we can see the use of a LogisticRegression model from sklearn by '\href{https://www.kaggle.com/manthannagpurkar/heart-failure-prediction}{manthannagpurkar}' can improve the accuracy an the testing data up to 80\%.
 
 
+\section{Diabetes Prediction}
+\newcommand{\linkLogisticRegression}{https://scikit-learn.org/stable/modules/generated/sklearn.linear\_model.LogisticRegression.html}
+\newcommand{\linkGaussianNB}{https://scikit-learn.org/stable/modules/generated/sklearn.naive\_bayes.GaussianNB.html?highlight=gaussiannb}
+\newcommand{\linkRandomForestClassifier}{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html?highlight=randomforestclassifier}
+
+
+
+As a fourth model and a comparision with the outcome during the lectures, we've choosen the 'diabetes' dataset, which has been analysed by using a 'VotingClassifier' including a \href{\linkLogisticRegression}{LogisticRegression\footnote{\url{\linkLogisticRegression}}}, a \href{\linkGaussianNB}{GaussianNaiveBayes\footnote{\url{\linkGaussianNB}}} and a \href{\linkRandomForestClassifier}{RandomForestClassifier\footnote{\url{\linkRandomForestClassifier}}}. We will use the AutoSklearnClassifier and compare it's score with the VotingClassifier.
+
+\subsection{Dataset}
+
+
+\subsection{Model Performance}
+\subsection{Model Comparision}
