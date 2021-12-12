@@ -19,8 +19,15 @@
 \RequirePackage{geometry}
 \RequirePackage{lipsum}
 \RequirePackage{hyperref}
+
+\RequirePackage{url}
+
 \RequirePackage{graphicx}
 \graphicspath{ {./images/} }
+
+\RequirePackage{titlesec}
+\titleformat{\chapter}[hang] 
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{0.3em}{}
 
 % \RequirePackage{showframe}
 

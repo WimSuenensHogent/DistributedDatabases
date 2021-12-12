@@ -4,6 +4,7 @@
 Within auto-sklearn, we can make use of the \href{\linkAutoSklearnClassifier}{'AutoSklearnClassifier'\footnote{AutoSklearnClassifier: \href{\linkAutoSklearnClassifier}{\linkAutoSklearnClassifier}}} to implement a model for a classifcation problem.
 
 \section{Heart Failure Prediction}
+\label{HeartFailurePrediction}
 
 The first classification problem we discuss is about the prediction of heart failure based upon different parameters.
 
@@ -22,7 +23,7 @@ The \href{\kagglelinkheartfailure}{dataset\footnote{Heart Failure Prediction : \
   \item platelets: The number of platelets in the blood ($kiloplatelets/mL$).
   \item serum\_creatinine: The level of serum creatinine in the blood ($mg/dL$).
   \item serum\_sodium: The level of serum sodium in the blood ($mEq/L$).
-  \item sex: Woman or man ($binary$).
+  \item sex: woman or man ($binary$).
   \item smoking: Whether the patient smokes or not ($boolean$).
   \item time: Follow-up period ($days$)
 \end{itemize}
@@ -38,7 +39,7 @@ The mean accuracy reduces for the testing data to 73,33\%. When we compare the a
 \begin{figure}[t]
   \begin{center}
     \includegraphics{heart-failure-heatmap}
-    \caption{Heatmap plot of the confusion matrix}
+    \caption{Heatmap of the confusion matrix for the heart failure predicitons}
   \end{center}
   % \centering
 \end{figure}
@@ -49,3 +50,50 @@ The mean accuracy reduces for the testing data to 73,33\%. When we compare the a
 When we check the previous kaggle submissions with the same dataset, we can see the use of a LogisticRegression model from sklearn by '\href{https://www.kaggle.com/manthannagpurkar/heart-failure-prediction}{manthannagpurkar}' can improve the accuracy an the testing data up to 80\%.
 
 
+\section{Diabetes Prediction}
+\newcommand{\linkLogisticRegression}{https://scikit-learn.org/stable/modules/generated/sklearn.linear\_model.LogisticRegression.html}
+\newcommand{\linkGaussianNB}{https://scikit-learn.org/stable/modules/generated/sklearn.naive\_bayes.GaussianNB.html?highlight=gaussiannb}
+\newcommand{\linkRandomForestClassifier}{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html?highlight=randomforestclassifier}
+
+
+
+As a fourth model and as a comparision with the outcome during the lectures, we've choosen the 'diabetes' dataset, which has been analysed by using a 'VotingClassifier' including a \href{\linkLogisticRegression}{LogisticRegression\footnote{\url{\linkLogisticRegression}}}, a \href{\linkGaussianNB}{GaussianNaiveBayes\footnote{\url{\linkGaussianNB}}} and a \href{\linkRandomForestClassifier}{RandomForestClassifier\footnote{\url{\linkRandomForestClassifier}}}. We will use the AutoSklearnClassifier and compare it's score with the VotingClassifier.
+
+\subsection{Dataset}
+
+The dataset can be found on github, has 724 entries and contains 8 features. Those features are:
+
+\begin{itemize}
+  \item Pregnancies: The number of pregnancies.
+  \item Glucose: The concentration of glucose after 2 hours in an oral glucose tolerance test.
+  \item BloodPressure: Diastolic blood pressure ($mm Hg$).
+  \item SkinThickness: Triceps skin fold thickness ($mm$).
+  \item Insulin: 2-Hour serum insulin ($mu U/ml$).
+  \item BMI: Body mass index ($kg/m^2$)
+  \item DiabetesPedigreeFunction: likelihood of diabetes based on family history.
+  \item Age: Age in years.
+\end{itemize}
+
+Similar as in lecture exercise we exclude all zero observations for 'BloodPressure', 'Glucose' and 'BMI', given these observations seem incorrect.
+
+\subsection{Model Performance}
+
+The modeling process is similar to the model for \nameref{HeartFailurePrediction}. We again use the 'AutoSklearnClassifier', after splitting the dataset into two part, a train and a test set.
+After, we've fit the model with our training data, we can make the predicitons for our testing data and compare with the actual labels.
+Our model get an accuracy of 87,35\% on the training data and 75,68\% on the testing data.
+
+Comparing the actual testing labels with the predicitons of the model for the testing data, we get a accuracy score of 75,68\%. However, the precision is only 62,50\%.
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics{heart-failure-heatmap}
+    \caption{Heatmap of the confusion matrix for the diabetes predicitons}
+  \end{center}
+  % \centering
+\end{figure}
+
+\subsection{Model Comparision}
+
+When we compare our model with the VotingClassifier built in the lecture exercise, we can see our model performs pretty similar. The accuracy of the VotingClassifier is 75,69\% with a precision of 62,90\%.
+
+This is somewhat suprising as the VotingClassifier train its model on an ensemble of multiple models and can sort out the 'mistakes' of the different provided models. We can conclude the AutoSklearnClassifier can construct a model which is pretty accurate with minor effort needed.
