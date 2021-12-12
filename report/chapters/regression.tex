@@ -1,22 +1,33 @@
 \chapter{Regression}
-In this section we discuss the datasets we used to research regression.
-We will explain in greater detail how our model performed, compare it to other models on and give some info over the dataset.
+\newcommand{\linkAutoSklearnRegressor}{https://automl.github.io/auto-sklearn/master/examples/20_basic/example_regression.html}
+
+Within auto-sklearn, we can make use of the \href{\linkAutoSklearnRegressor}{'AutoSklearnRegressor'\footnote{AutoSklearnRegressor: \href{\linkAutoSklearnRegressor}{\linkAutoSklearnRegressor}}} to implement a model for a regression problem.
 
 \section{Used Car Prices}
-For this dataset we used the competition version of the big data set provided on Kaggle. This set is based on a big dataset of 100 000 listings on used cars in the UK. We then found and used a version that was slimmed down for competition. This dataset looked ideal for us to learn more about auto-sklearn.
-\\
-\url{https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes?select=vw.csv}
-\url{https://www.kaggle.com/kukuroo3/used-car-price-dataset-competition-format}
+\newcommand{\kagglelinkusedcaruk}{https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes?select=vw.csv}
+
+For this dataset we used the competition version of a big data set provided on  This set is based on a big \href{\kagglelinkusedcaruk}{dataset\footnote{Used Car UK:\href{\kagglelinkusedcaruk}{\kagglelinkusedcaruk}}} of 100 000 listings on used cars in the UK. We then found and used a version that was slimmed down for competition. This dataset looked ideal for us to learn more about auto-sklearn.
 
 \subsection{Dataset}
+\newcommand{\kagglelinkusedcar}{https://www.kaggle.com/kukuroo3/used-car-price-dataset-competition-format}
 
-The dataset is based on a list of 100 000 listings of used cars in the UK.
-This dataset was preprocessed and separated into competition format.
-The label for the test data is provided in the form of a function.
-After cleaning the data we where left with the following columns:
-\\
-carID, brand ,model year, transmission, mileage, fuelType, tax, mpg, engineSize, price.
-Their are 2672 entries in total.
+The \href{\kagglelinkusedcar}{dataset\footnote{Used Car price Prediction:\href{\kagglelinkusedcar}{\kagglelinkusedcar}}} can be found on Kaggle and contains 12 features which can be used to predict price of used cars in the UK. Those features are:
+
+\begin{itemize}
+    \item carID: The id of the car in the dataset.
+    \item brand: brand of the car.
+    \item model year: Build year of the model.
+    \item transmission: type of transmission.
+    \item mileage: Total amount of mileage on the car.
+    \item fuelType: Type of fuel.
+    \item tax: Amount of tax.
+    \item mpg: miles-per-gallon.
+    \item engineSize: Size of the engine.
+    \item price: price of the car.
+\end{itemize}
+
+\noindent There are 2672 observations in the dataset. For none of the features data is missing.
+
 \subsection{Model Performance}
 
 First we visualised the dataset with 2 different pairplots.
@@ -51,14 +62,10 @@ After fitting and training the data this are the results we got for the differen
 \end{table}
 
 \subsection{Model Comparision}
-
-We chose 3 models from kaggle to compare our results with. After comparing our scores we found out that we have a better performing model. Our model included te model of the car, this was something the other models left out. We can conclude that our models performs better than the ones we compared scores with.
-\\
-Url1: \url{https://www.kaggle.com/selinsong/u-car-rf-r2-score-0-94/data}
-
-Url2: \url{https://www.kaggle.com/yuyuyuyuy/rf-test-r2-score-0-956}
-
-Url3: \url{https://www.kaggle.com/johyunkang/py-rf-test-r2-0-939}
+\newcommand{\kagglelinkusedcarcompare1}{https://www.kaggle.com/selinsong/u-car-rf-r2-score-0-94/data}
+\newcommand{\kagglelinkusedcarcompare2}{https://www.kaggle.com/yuyuyuyuy/rf-test-r2-score-0-956}
+\newcommand{\kagglelinkusedcarcompare3}{https://www.kaggle.com/johyunkang/py-rf-test-r2-0-939}
+We chose 3 models from kaggle to compare our results with. After comparing our scores we found out that we have a better performing model. Our model included te model of the car, this was something the other models left out. We can conclude that our models performs better than the ones we compared scores with. We reference the chose models as \href{\kagglelinkusedcarcompare1}{Url1\footnote{Url1:\href{\kagglelinkusedcarcompare1}{\kagglelinkusedcarcompare1}}}, \href{\kagglelinkusedcarcompare2}{Url2\footnote{Url2:\href{\kagglelinkusedcarcompare2}{\kagglelinkusedcarcompare2}}} and \href{\kagglelinkusedcarcompare3}{Url3\footnote{Url3:\href{\kagglelinkusedcarcompare3}{\kagglelinkusedcarcompare3}}} in the table.
 
 \begin{table}[h!]
     \begin{center}
